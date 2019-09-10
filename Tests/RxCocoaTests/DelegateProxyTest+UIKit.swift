@@ -92,14 +92,6 @@ extension DelegateProxyTest {
 }
 #endif
 
-#if os(iOS)
-extension DelegateProxyTest {
-    func test_UIWebViewDelegateExtension() {
-        performDelegateTest(UIWebViewSubclass(frame: CGRect.zero)) { ExtendWebViewDelegateProxy(webViewSubclass: $0) }
-    }
-}
-#endif
-
 extension DelegateProxyTest {
     func test_UITabBarControllerDelegateExtension() {
         performDelegateTest(UITabBarControllerSubclass()) { ExtendTabBarControllerDelegateProxy(tabBarControllerSubclass: $0) }
